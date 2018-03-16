@@ -2,6 +2,8 @@
 
 LineAlpha Fix QR
 
+Fork From Kohe-ioroi
+
 ▶️ sudo pip install rsa --upgrade
 
 ▶️ sudo pip install bs4
