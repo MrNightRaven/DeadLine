@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#Thanks for LD TEAM
+# Special Thanks => LD TEAM & DeadLine™
 import DeadLine
 from DeadLine.lib.Gen.ttypes import *
 from Trevor.undead import bmth
