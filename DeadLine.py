@@ -2,7 +2,7 @@
 
 import DeadLine
 from DeadLine.lib.Gen.ttypes import *
-from Trevor.undead import qr
+from Trevor.undead import bmth
 from datetime import datetime
 from bs4 import BeautifulSoup
 from bs4 import Tag
@@ -10,9 +10,10 @@ import pafy
 import youtube_dl
 import time, random, ast, sys, re, os, json, subprocess, threading, string, codecs, requests, tweepy, ctypes, urllib, urllib2, wikipedia,tempfile,glob,shutil,unicodedata,goslate
 from gtts import gTTS
+lili = bmth().spirit()
 
 trev = DeadLine.LINE()
-trev.login(token=qr().get())
+trev.login(token=lili)
 trev.loginResult()
 
 print(""" ________        __  _            _                      ______
