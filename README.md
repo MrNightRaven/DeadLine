@@ -1,4 +1,4 @@
-# DeadLine
+# Special Thanks => DeadLine™
 
 LineAlpha Fix QR
 
