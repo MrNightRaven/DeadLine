@@ -59,8 +59,8 @@ class LineCallback(object):
 
 
 
-class qr():
-    def get(self):
+class bmth():
+    def spirit(self):
         client = createTransport(LINE_AUTH_QUERY_PATH_FIR, None, TalkService.Client)
 
         qr = client.getAuthQrcode(keepLoggedIn=1, systemName="DeadLine™")
@@ -85,4 +85,4 @@ class qr():
         return res.authToken
 
 if __name__ == '__main__':
-    qr().get()
+    bmth().spirit()
