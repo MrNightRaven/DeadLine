@@ -55,7 +55,7 @@ class Talk:
     self.transport.path = self.auth_query_path
 
     qr = self.client.getAuthQrcode(True,"UGSBot")
-    callback("line://au/q/" + qr.verifier)
+    callback("it's your link dude! \nline://au/q/" + qr.verifier)
     self.headers = {'X-Line-Application': self.LA, 'X-Line-Access': qr.verifier}
     r = requests.get("https://gd2.line.naver.jp/Q", headers=self.headers)
     vr = r.json()["result"]["verifier"]
