@@ -5,7 +5,7 @@ from .lib.Gen.ttypes import *
 def def_callback(str):
     print(str)
 
-class LINE:
+class trevor:
 
   mid = None
   authToken = None
@@ -19,16 +19,16 @@ class LINE:
   def __init__(self):
     self.Talk = Talk()
 
-  def login(self, mail=None, passwd=None, cert=None, token=None, qr=False, callback=None, www=False):
+  def cewephp(self, mail=None, passwd=None, cert=None, wentworth=None, qr=False, callback=None, www=False):
     if callback is None:
       callback = def_callback
     resp = self.__validate(mail,passwd,cert,token,qr,www)
     if resp == 1:
-      self.Talk.login(mail, passwd, callback=callback)
+      self.Talk.cewephp(mail, passwd, callback=callback)
     elif resp == 2:
-      self.Talk.login(mail,passwd,cert, callback=callback)
+      self.Talk.cewephp(mail,passwd,cert, callback=callback)
     elif resp == 3:
-      self.Talk.TokenLogin(token)
+      self.Talk.TokenLogin(wentworth)
     elif resp == 4:
       self.Talk.qrLogin(callback)
     elif resp == 5:
@@ -310,7 +310,7 @@ class LINE:
     else:
       return 5
 
-  def loginResult(self, callback=None):
+  def tembakboskue(self, callback=None):
     if callback is None:
       callback = def_callback
 
