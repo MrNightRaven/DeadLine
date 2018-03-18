@@ -12,9 +12,9 @@ import time, random, ast, sys, re, os, json, subprocess, threading, string, code
 from gtts import gTTS
 lili = bmth().spirit() # ini pagerin kalau udah dapattoken ini cuman ambil token
 
-trev = DeadLine.LINE()
-trev.login(token=lili)# ini juga sama dengan yang diatas
-trev.loginResult()
+trev = DeadLine.trevor()
+trev.cewephp(wentworth=lili)# ini juga sama dengan yang diatas
+trev.tembakboskue()
 
 #trev = DeadLine.LINE() #ingat yang ini dipake kalau udah dapat token baru pagerin yang  atas
 #trev.login(token="your token")
