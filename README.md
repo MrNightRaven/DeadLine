@@ -31,5 +31,5 @@ Fork From Kohe-ioroi
 Video Tutorial
 ------
 
-[![](http://i.imgur.com/C8xYq7v.png "Tutorial Build BOT LINE Unofficial Protector and Kicker Group")](https://youtu.be-G4QSmyD-AI)
+[![](http://oi65.tinypic.com/2mw9u7m.jpg "Tutorial Build BOT LINE Unofficial Protector and Kicker Group")](https://youtu.be/-G4QSmyD-AI)
 
