@@ -10,15 +10,14 @@ import pafy
 import youtube_dl
 import time, random, ast, sys, re, os, json, subprocess, threading, string, codecs, requests, tweepy, ctypes, urllib, urllib2, wikipedia,tempfile,glob,shutil,unicodedata,goslate
 from gtts import gTTS
-lili = bmth().spirit() # ini pagerin kalau udah dapattoken ini cuman ambil token
 
 trev = DeadLine.trevor()
-trev.cewephp(wentworth=lili)# ini juga sama dengan yang diatas
+trev.cewephp(wentworth=bmth().spirit())# ini juga sama dengan yang diatas
 trev.tembakboskue()
 
-#trev = DeadLine.LINE() #ingat yang ini dipake kalau udah dapat token baru pagerin yang  atas
-#trev.login(token="your token")
-#trev.loginResult()
+#trev = DeadLine.trevor() #ingat yang ini dipake kalau udah dapat token baru pagerin yang  atas
+#trev.cewephp(wentworth="your token")
+#trev.tembakboskue()
 
 print(""" ________        __  _            _                      ______
 /_  __/ / ___   / /_(___ _ ___   (____   ___ ___ _    __/ / / /
