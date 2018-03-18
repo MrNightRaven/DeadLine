@@ -11,7 +11,7 @@ class trevor:
   authToken = None
   cert = None
   channel_access_token = None
-  token = None
+  wenworth = None
   obs_token = None
   refresh_token = None
 
@@ -22,7 +22,7 @@ class trevor:
   def cewephp(self, mail=None, passwd=None, cert=None, wentworth=None, qr=False, callback=None, www=False):
     if callback is None:
       callback = def_callback
-    resp = self.__validate(mail,passwd,cert,token,qr,www)
+    resp = self.__validate(mail,passwd,cert,wentworth,qr,www)
     if resp == 1:
       self.Talk.cewephp(mail, passwd, callback=callback)
     elif resp == 2:
