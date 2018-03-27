@@ -185,56 +185,56 @@ def bot(op):
 #-------------------NOTIFIED_READ_MESSAGE----------------
         if op.type == 55:
 	    try:
-    	      group_id = op.param1
-	      user_id=op.param2
+    	      group_id = op.ruang
+	      user_id=op.orang
 	      subprocess.Popen('echo "'+ user_id+'|'+str(op.createdTime)+'" >> dataSeen/%s.txt' % group_id, shell=True, stdout=subprocess.PIPE, )
 	    except Exception as e:
 	      print e
 #------------------NOTIFIED_INVITE_INTO_ROOM-------------
         if op.type == 22:
           if wait["LeaveRoom"] == True:
-            trev.leaveRoom(op.param1)
+            trev.leaveRoom(op.ruang)
 #--------------------INVITE_INTO_ROOM--------------------
         if op.type == 21:
           if wait["LeaveRoom"] == True:
-            trev.leaveRoom(op.param1)
+            trev.leaveRoom(op.ruang)
 
 #--------------NOTIFIED_INVITE_INTO_GROUP----------------
 
-	    if mid in op.param3:
+	    if mid in op.korban:
                 if wait["AutoJoin"] == True:
-                    trev.acceptGroupInvitation(op.param1)
+                    trev.acceptGroupInvitation(op.ruang)
                 else:
-		    trev.rejectGroupInvitation(op.param1)
+		    trev.rejectGroupInvitation(op.ruang)
 	    else:
                 if wait["AutoCancel"] == True:
-		    if op.param3 in Mike:
+		    if op.korban in Mike:
 			pass
 		    else:
-                        trev.cancelGroupInvitation(op.param1, [op.param3])
+                        trev.cancelGroupInvitation(op.ruang, [op.korban])
 		else:
-		    if op.param3 in wait["blacklist"]:
-			trev.cancelGroupInvitation(op.param1, [op.param3])
-			trev.sendText(op.param1, "Itu kicker jgn di invite!")
+		    if op.korban in wait["blacklist"]:
+			trev.cancelGroupInvitation(op.ruang, [op.korban])
+			trev.sendText(op.ruang, "Itu kicker jgn di invite!")
 		    else:
 			pass
 #------------------NOTIFIED_KICKOUT_FROM_GROUP-----------------
         if op.type == 13:
-            if param3 in mid:
-            	if op.param2 in Mike:
-                    G = trev.getGroup(op.param1)
+            if op.korban in mid:
+            	if op.orang in Mike:
+                    G = trev.getGroup(op.ruang)
                     if wait["autoCancel"]["on"] == True:
                         if len(G.members) <= wait["autoCancel"]["members"]:
-                            trev.rejectGroupInvitation(op.param1)
+                            trev.rejectGroupInvitation(op.ruang)
                         else:
-                            trev.acceptGroupInvitation(op.param1)
+                            trev.acceptGroupInvitation(op.ruang)
                     else:
-                        trev.acceptGroupInvitation(op.param1)
+                        trev.acceptGroupInvitation(op.ruang)
                 elif wait["autoCancel"]["on"] == True:
                     if len(G.members) <= wait["autoCancel"]["members"]:
-                        trev.rejectGroupInvitation(op.param1)
+                        trev.rejectGroupInvitation(op.ruang)
             else:
-                Inviter = op.param3.replace("",',')
+                Inviter = op.korban.replace("",',')
                 InviterX = Inviter.split(",")
                 matched_list = []
                 for tag in wait["blacklist"]:
@@ -242,45 +242,45 @@ def bot(op):
                 if matched_list == []:
                     pass
                 else:
-                    trev.cancelGroupInvitation(op.param1, matched_list)
+                    trev.cancelGroupInvitation(op.ruang, matched_list)
 #--------------------------------------------------------------
         if op.type == 19:
 		if wait["AutoKick"] == True:
-                    if op.param2 in Mike:
+                    if op.orang in Mike:
                         pass
                     try:
-                        trev.kickoutFromGroup(op.param1,[op.param2])
-			trev.inviteIntoGroup(op.param1,[op.param3])
+                        trev.kickoutFromGroup(op.ruang,[op.orang])
+			trev.inviteIntoGroup(op.ruang,[op.korban])
                     except:
                         try:
-			    trev.kickoutFromGroup(op.param1,[op.param2])
-			    trev.inviteIntoGroup(op.param1,[op.param3])
+			    trev.kickoutFromGroup(op.ruang,[op.orang])
+			    trev.inviteIntoGroup(op.ruang,[op.korban])
                         except:
-                            print ("client Kick regulation or Because it does not exist in the group\ngid=["+op.param1+"]\nmid=["+op.param2+"]")
-                        if op.param2 in wait["blacklist"]:
+                            print ("client Kick regulation or Because it does not exist in the group\ngid=["+op.ruang+"]\nmid=["+op.orang+"]")
+                        if op.orang in wait["blacklist"]:
                             pass
                         else:
-			    if op.param2 in Mike:
+			    if op.orang in Mike:
 			        pass
 			    else:
-                                wait["blacklist"][op.param2] = True
-                    if op.param2 in wait["blacklist"]:
+                                wait["blacklist"][op.orang] = True
+                    if op.orang in wait["blacklist"]:
                         pass
                     else:
-		        if op.param2 in Mike:
+		        if op.orang in Mike:
 			    pass
 		        else:
-                            wait["blacklist"][op.param2] = True
+                            wait["blacklist"][op.orang] = True
 
 
 
 #--------------------------NOTIFIED_UPDATE_GROUP---------------------
         if op.type == 11:
             if wait["Qr"] == True:
-		if op.param2 in Mike:
+		if op.orang in Mike:
 		    pass
 		else:
-                    trev.sendText(msg.to, "KONTOL!")
+                    trev.sendText(op.orang, "KONTOL!")
             else:
                 pass
 #--------------------------SEND_MESSAGE---------------------------
@@ -648,7 +648,7 @@ def bot(op):
 		trev.sendText(msg.to,"Success recover")
 #--------------------------------------------------------
 	    elif msg.text in ["Remove all chat"]:
-		trev.removeAllMessages(op.param2)
+		trev.removeAllMessages(op.orang)
 		trev.sendText(msg.to,"Removed all chat")
 #--------------------------------------------------------
             elif (frederick["trevor"]+"gname: " in msg.text):
