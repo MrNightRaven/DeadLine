@@ -1,3 +1,8 @@
+
+# -*- coding: utf-8 -*-
+#Thanks Author Trevor :]
+#Mute for notification your group
+#jadi fungsinya kaya lu matiin notif group lu biar line lu ga bising hahaha :)
 from linepy import *
 from akad import *
 from akad import ttypes
