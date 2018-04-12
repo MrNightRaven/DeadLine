@@ -8,7 +8,7 @@ import time, random, sys, json, codecs, ast, threading, glob, re, string, os, re
 
 
 
-trev = LINE("Er8awprPzL3YifMIm8P3.7mdLiCFg8AFj4jVcUWgviW.36MoKYso1BZ5hUGtzFqjtrR4brmvdiUvOxT2vi7LtDk=")#kosongin aja kalau pengen login qr
+trev = LINE()#kosongin aja kalau pengen login qr
 trev.log("Auth Token: " + str(trev.authToken))
 
 oepoll = OEPoll(trev)
