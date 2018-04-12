@@ -1,5 +1,6 @@
 
 # -*- coding: utf-8 -*-
+#ini berfungsi. coba saja.
 #Thanks Author Trevor :]
 #Mute for notification your group
 #jadi fungsinya kaya lu matiin notif group lu biar line lu ga bising hahaha :)
