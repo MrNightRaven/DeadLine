@@ -45,6 +45,14 @@ def example(op):
                     aa.notificationDisabled = True
                     trev.updateGroup(aa)
                     trev.sendMessage(msg.to,"Berhasil menonaktifkan notif group")
+            elif "getname" in pesan:
+                            key = eval(msg.contentMetadata["MENTION"])
+                            key1 = key["MENTIONEES"][0]["M"]
+                            contact = trev.getContact(key1)
+                            try:
+                                trev.sendMessage(msg.to,"Nama: {}".format(contact.displayName)+"\nRename: {}".format(contact.displayNameOverridden))
+                            except:
+                                trev.sendMessage(msg.to,"Nama Rename: {}".format(contact.displayNameOverridden))
     except Exception as e:
         print(e)
 while True:
