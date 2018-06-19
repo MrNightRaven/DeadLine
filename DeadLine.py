@@ -12,7 +12,7 @@ import time, random, ast, sys, re, os, json, subprocess, threading, string, code
 from gtts import gTTS
 
 trev = DeadLine.trevor()
-trev.cewephp(wentworth=bmth().spirit())# ini juga sama dengan yang diatas
+trev.cewephp(wentworth=bmth().spirit())#ini juga sama dengan yang diatas
 trev.tembakboskue()
 
 #trev = DeadLine.trevor() #ingat yang ini dipake kalau udah dapat token baru pagerin yang  atas
